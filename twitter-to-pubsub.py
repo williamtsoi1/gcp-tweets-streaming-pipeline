@@ -13,12 +13,12 @@ import utils
 
 # Get your twitter credentials from the environment variables.
 # These are set in the 'twitter-stream.json' manifest file.
-consumer_key = 'JYjcOAP5AXVzVhvdwRBtXT4nf'
-consumer_secret = 'K3KYqcuxxK1mmjjOSHPz9wWod8y1E6SacmxCnr1IVT6oG1ToAC'
-access_token = '1730415624-4IlhuR2gudwdHJDqGMDQGnNc7vOWmFQWJHdr5F1'
-access_token_secret = '9UB31kXzt0i8GfZozQCFoNOgNbIEP8hbHzDlIn66YNgU4'
+consumer_key = '[INSERT]'
+consumer_secret = '[INSERT]'
+access_token = '[INSERT]'
+access_token_secret = '[INSERT]'
 
-PUBSUB_TOPIC = 'projects/grey-sort-challenge/topics/twitter'
+PUBSUB_TOPIC = '[INSERT]'
 NUM_RETRIES = 3
 
 

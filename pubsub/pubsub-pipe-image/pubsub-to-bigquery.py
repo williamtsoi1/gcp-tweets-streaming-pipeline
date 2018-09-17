@@ -118,7 +118,7 @@ def write_to_bq(pubsub, sub_name, bigquery):
                 print 'sleeping...'
                 time.sleep(WAIT)
         response = utils.bq_data_insert(bigquery, PROJECT_ID, os.environ['BQ_DATASET'],
-                             os.environ['BQ_TABLE'], tweets)
+                                        os.environ['BQ_TABLE'], tweets)
         tweets = []
         count += 1
         if count % 25 == 0:

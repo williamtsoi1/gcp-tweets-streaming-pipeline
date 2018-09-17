@@ -1,7 +1,7 @@
 [
   {
     "name": "created_at",
-    "type": "TIMESTAMP",
+    "type": "STRING",
     "mode": "NULLABLE"
   },
   {
@@ -295,7 +295,7 @@
       },
       {
         "name": "created_at",
-        "type": "TIMESTAMP",
+        "type": "STRING",
         "mode": "NULLABLE"
       },
       {
@@ -530,7 +530,7 @@
     "fields": [
       {
         "name": "created_at",
-        "type": "TIMESTAMP",
+        "type": "STRING",
         "mode": "NULLABLE"
       },
       {
@@ -846,7 +846,7 @@
           },
           {
             "name": "created_at",
-            "type": "TIMESTAMP",
+            "type": "STRING",
             "mode": "NULLABLE"
           },
           {

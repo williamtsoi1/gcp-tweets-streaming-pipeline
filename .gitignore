@@ -1,2 +1,13 @@
+*.lock
 *.iml
-.idea
+purge.sh
+trigger_pipeline.sh
+/.gradle/
+/.idea/
+/build/
+/classes/
+/out/
+key.json
+.DS_Store
+cloud-function/.vscode/
+twitter.creds

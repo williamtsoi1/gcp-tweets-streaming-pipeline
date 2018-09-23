@@ -4,15 +4,12 @@ to pull in tweets and publish them to a PubSub topic.
 
 import base64
 import datetime
-import os
 from tweepy import OAuthHandler
 from tweepy import Stream
 from tweepy.streaming import StreamListener
 
 import utils
 
-# Get your twitter credentials from the environment variables.
-# These are set in the 'twitter-stream.json' manifest file.
 consumer_key = '[INSERT]'
 consumer_secret = '[INSERT]'
 access_token = '[INSERT]'
@@ -72,7 +69,7 @@ class StdOutListener(StreamListener):
 
 if __name__ == '__main__':
     print '....'
-    mode = 'sample'
+    mode = '!sample'
     listener = StdOutListener()
     auth = OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
@@ -83,11 +80,11 @@ if __name__ == '__main__':
     # set up the streaming depending upon whether our mode is 'sample', which
     # will sample the twitter public stream. If not 'sample', instead track
     # the given set of keywords.
-    # This environment var is set in the 'twitter-stream.yaml' file.
     if mode == 'sample':
         stream.sample()
     else:
         stream.filter(
+                languages=['en'],
                 track=['bigdata', 'kubernetes', 'bigquery', 'docker', 'google',
                        'googlecloud', 'golang', 'dataflow',
                        'containers', 'appengine', 'gcp', 'compute',

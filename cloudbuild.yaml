@@ -1,6 +1,6 @@
 steps:
 - name: gcr.io/cloud-builders/git
-  args: ['clone', 'https://github.com/polleyg/gcp-tweet-ingestion-pubsub-bigquery.git']
+  args: ['clone', 'https://github.com/polleyg/gcp-tweets-streaming-pipeline.git']
 
 - name: gcr.io/cloud-builders/gcloud
   args: ['app', 'deploy', '--version=tweets']

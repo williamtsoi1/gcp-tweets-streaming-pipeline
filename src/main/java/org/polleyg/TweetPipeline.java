@@ -47,6 +47,7 @@ public class TweetPipeline {
 
     private static TableSchema getTableSchema() {
         List<TableFieldSchema> fields = new ArrayList<>();
+        fields.add(new TableFieldSchema().setName("timestamp").setType("INTEGER"));
         fields.add(new TableFieldSchema().setName("payload").setType("STRING"));
         return new TableSchema().setFields(fields);
     }
@@ -55,7 +56,10 @@ public class TweetPipeline {
         @ProcessElement
         public void processElement(ProcessContext c) {
             String payload = new String(c.element().getPayload(), StandardCharsets.UTF_8);
-            c.output(new TableRow().set("payload", payload));
+            c.output(new TableRow()
+                    .set("timestamp", System.currentTimeMillis())
+                    .set("payload", payload)
+            );
         }
     }
 }

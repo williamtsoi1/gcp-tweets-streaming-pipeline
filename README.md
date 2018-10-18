@@ -13,7 +13,7 @@ Twitter -> App Engine Flex -> PubSub -> Dataflow -> BigQuery
 `gcloud builds submit --config=cloudbuild.yaml .`
 
 ## Sample Query
-`SELECT
+```SELECT
   TIMESTAMP_MILLIS(timestamp) AS tweet_timestamp,
   JSON_EXTRACT(payload,
     '$.text') AS tweet_text,
@@ -27,4 +27,4 @@ FROM
   `twitter.tweets`
 WHERE
   JSON_EXTRACT(payload,
-    '$.text') LIKE '%BigQuery%'`
+    '$.text') LIKE '%BigQuery%'```

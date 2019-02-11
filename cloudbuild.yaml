@@ -1,12 +1,15 @@
 steps:
+# The code
 - name: gcr.io/cloud-builders/git
   args: ['clone', 'https://github.com/polleyg/gcp-tweets-streaming-pipeline.git']
 
+# App Engine ('beta' for live debugging)
 - name: gcr.io/cloud-builders/gcloud
-  args: ['app', 'deploy', '--version=tweets']
+  args: ['beta', 'app', 'deploy', '--version=tweets']
   dir: 'twitter-to-pubsub'
 
+# Dataflow pipeline
 - name: gcr.io/cloud-builders/gradle
-  args: ['build', 'run']
+  args: ['run']
 
 timeout: 1800s
